@@ -1,12 +1,12 @@
 .planet-image {
-  border-radius: 20%;
+  border-radius: 8px;
   display: block;
-  width: 50%;
-  max-width: 225px;
+  width: 100%;
   margin: auto;
+  margin-top: 1rem;
 }
-.random-planet-bar {
-  margin: 1rem;
+.planet-details-bar {
+  margin-right: 1rem;
   padding: 1rem;
   background-color: rgba(110, 110, 110, 0.555);
   border-radius: 50px;

@@ -1,12 +1,13 @@
-import "./app.css";
+import { Component } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "../header";
 import RandomPlanet from "../random-planet";
 import ItemList from "../item-list";
 import PersonDetails from "../person-details/person-details";
 import Spiner from "../spiner";
-import { Component } from "react";
 import SwapiService from "../../services/swapi-service";
-import PeoplePage from "../people-page/people-page";
+import { PeoplePage, PlanetPage, StarshipPage } from "../pages";
+import "./app.css";
 
 export default class App extends Component {
   swapiService = new SwapiService();
@@ -22,19 +23,14 @@ export default class App extends Component {
       <div className="App">
         <Header />
         <RandomPlanet />
-        <div className="row">
-          <div className="col-md-6">
-            <ItemList
-              onItemSelected={this.onItemSelected}
-              getData={this.swapiService.getAllPeople}
-              renderItem={(item) => `${item.name}, ${item.gender}`}
-            />
-          </div>
-          <div className="col-md-6">
-            <PersonDetails selectedPerson={this.state.selectedPerson} />
-          </div>
-        </div>
-        <PeoplePage />
+        <BrowserRouter basename="star-db">
+          <Routes>
+            <Route path="/" element={null} />
+            <Route path="people" element={<PeoplePage />} />
+            <Route path="planet" element={<PlanetPage />} />
+            <Route path="starship" element={<StarshipPage />} />
+          </Routes>
+        </BrowserRouter>
       </div>
     );
   }
