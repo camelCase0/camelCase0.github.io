@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/star-db/static/css/main.9c6ba3ed.css",
-    "main.js": "/star-db/static/js/main.0bbeb176.js",
+    "main.js": "/star-db/static/js/main.ba8a97be.js",
     "static/media/arbyz.jfif": "/star-db/static/media/arbyz.ef814d4c9ca61a28db1e.jfif",
     "index.html": "/star-db/index.html",
     "main.9c6ba3ed.css.map": "/star-db/static/css/main.9c6ba3ed.css.map",
-    "main.0bbeb176.js.map": "/star-db/static/js/main.0bbeb176.js.map"
+    "main.ba8a97be.js.map": "/star-db/static/js/main.ba8a97be.js.map"
   },
   "entrypoints": [
     "static/css/main.9c6ba3ed.css",
-    "static/js/main.0bbeb176.js"
+    "static/js/main.ba8a97be.js"
   ]
 }
