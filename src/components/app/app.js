@@ -20,18 +20,18 @@ export default class App extends Component {
   };
   render() {
     return (
-      <div className="App">
-        <Header />
-        <RandomPlanet />
-        <HashRouter basename="star-db">
+      <HashRouter>
+        <div className="App">
+          <Header />
+          <RandomPlanet />
           <Routes>
             <Route path="/" element={null} />
             <Route path="people" element={<PeoplePage />} />
             <Route path="planet" element={<PlanetPage />} />
             <Route path="starship" element={<StarshipPage />} />
           </Routes>
-        </HashRouter>
-      </div>
+        </div>
+      </HashRouter>
     );
   }
 }
