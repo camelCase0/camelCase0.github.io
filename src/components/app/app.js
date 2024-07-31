@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Header from "../header";
 import RandomPlanet from "../random-planet";
 import ItemList from "../item-list";
@@ -23,14 +23,14 @@ export default class App extends Component {
       <div className="App">
         <Header />
         <RandomPlanet />
-        <BrowserRouter basename="star-db">
+        <HashRouter basename="star-db">
           <Routes>
             <Route path="/" element={null} />
             <Route path="people" element={<PeoplePage />} />
             <Route path="planet" element={<PlanetPage />} />
             <Route path="starship" element={<StarshipPage />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     );
   }
